@@ -1,0 +1,13 @@
+<html>
+<body>
+{% if not data %}
+    <a href="{{ url_for('transform_data')}}" class="btn btn-default">Create new file/database</a>
+{% else %}
+<form action="{{ url_for('record_view') }}" method="POST">
+    <h3>Get data by Record ID</h3>
+    <input type="text" name="record_id"/><br><br>
+    <input type="submit" value="Submit"/><br>
+</form>
+{% endif %}
+</body>
+</html>
